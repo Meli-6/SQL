@@ -1,0 +1,27 @@
+--Create an Ice-Cream Shop Database
+
+CREATE Table icecream (id INTEGER PRIMARY KEY, Flavor Text, Scoops INTEGER, Toppings INTEGER, Price INTEGER);
+
+INSERT INTO icecream VALUES(1, "Vanilla", 1, 1, 2);
+INSERT INTO icecream VALUES(2, "Chocolate", 1, 1, 2);
+INSERT INTO icecream VALUES(3, "StrawBerry", 1, 1, 2);
+INSERT INTO icecream VALUES(4, "Vanilla",2 , 1, 3);
+INSERT INTO icecream VALUES(5, "Chocolate", 2, 1, 3);
+INSERT INTO icecream VALUES(6, "StrawBerry", 2, 1, 3);
+INSERT INTO icecream VALUES(7, "Vanilla", 3, 1, 4);
+INSERT INTO icecream VALUES(8, "Chocolate", 3, 1, 4);
+INSERT INTO icecream VALUES(9, "StrawBerry", 3, 1, 4);
+INSERT INTO icecream VALUES(10, "Vanilla", 4, 1, 5);
+INSERT INTO icecream VALUES(11, "Chocolate", 4, 1, 5);
+INSERT INTO icecream VALUES(12, "StrawBerry", 4, 1, 5);
+INSERT INTO icecream VALUES(13, "Vanilla", 5, 1, 6);
+INSERT INTO icecream VALUES(14, "Chocolate", 5, 1, 6);
+INSERT INTO icecream VALUES(15, "StrawBerry", 5, 1, 6);
+
+--What is the total price if I ordered one of each ice-cream options on the menu?
+SELECT SUM(Price) FROM icecream;
+
+--display the database ordered by price (most to least expensive).
+SELECT * FROM icecream
+ORDER BY price desc;
+
